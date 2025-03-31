@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import { FaFileDownload } from "react-icons/fa";
 import { Document, Page } from "react-pdf";
 import { pdfjs } from "react-pdf";
@@ -7,7 +6,6 @@ import { pdfjs } from "react-pdf";
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
 const Resume = () => {
-  const [scale, setScale] = useState(1.5);
   const resumeUrl = "./assets/Atharva Pansare Resume ML.pdf";
 
   return (
@@ -59,7 +57,7 @@ const Resume = () => {
             pageNumber={1}
             renderAnnotationLayer={false}
             renderTextLayer={false}
-            scale={scale}
+            scale={1.5}
           />
         </Document>
       </div>

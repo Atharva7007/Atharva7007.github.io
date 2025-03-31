@@ -1,4 +1,3 @@
-import React from "react";
 import myPhoto from "/assets/Atharva 1.jpg"; // Ensure you have your photo in the assets folder
 
 const About = () => {

@@ -44,7 +44,6 @@ const skills = [
 const Skills = () => {
   return (
     <div className="py-10 px-5 text-center">
-      <h2 className="text-3xl font-bold mb-6 text-neon-green">Skills</h2>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {skills.map((skill, index) => (
           <div
