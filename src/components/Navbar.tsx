@@ -6,6 +6,7 @@ import {
   FaUser,
   FaCode,
 } from "react-icons/fa";
+import { MdOutlineScience } from "react-icons/md";
 
 const Navbar = () => {
   return (
@@ -27,6 +28,12 @@ const Navbar = () => {
           <Link to="/skills" className="flex items-center space-x-2">
             <FaCode />
             <span>Skills</span>
+          </Link>
+        </li>
+        <li>
+          <Link to="/publications" className="flex items-center space-x-2">
+            <MdOutlineScience />
+            <span>Publications</span>
           </Link>
         </li>
         <li>

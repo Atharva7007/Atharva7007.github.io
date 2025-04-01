@@ -22,26 +22,35 @@ const Home = () => {
   }, []);
 
   return (
-    <div>
+    <div style={{ marginTop: "80px" }}>
       <DecryptedText
         text="Hi there!"
         animateOn="view"
         revealDirection="start"
         sequential={true}
-        speed={70}
+        speed={50}
+        style={{ fontSize: "2rem" }} // Increased font size
       />
       <div>
+        <span style={{ fontSize: "2.5rem" }}>I'm</span>{" "}
+        {/* Increased font size */}
         <DecryptedText
-          text="I'm Atharva Pansare"
+          text=" Atharva Pansare"
           animateOn="view"
           revealDirection="start"
           sequential={true}
-          speed={70}
+          speed={50}
+          style={{ color: "#39ff14", fontSize: "2.5rem" }} // Increased font size
         />
       </div>
+      <br></br>
 
       <div>
-        <p>I am {roles[currentRole]}</p>
+        <p style={{ fontSize: "1.8rem" }}>
+          {" "}
+          {/* Increased font size */}I am{" "}
+          <span style={{ color: "#39ff14" }}>{roles[currentRole]}</span>{" "}
+        </p>
       </div>
 
       <div style={{ textAlign: "center", marginTop: "50px" }}>

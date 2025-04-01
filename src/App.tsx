@@ -7,6 +7,7 @@ import Resume from "./components/Resume";
 import LetterGlitch from "./blocks/Backgrounds/LetterGlitch/LetterGlitch";
 import Skills from "./components/Skills";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import Publications from "./components/Publications";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/resume" element={<Resume />} />
           <Route path="/skills" element={<Skills />} />
+          <Route path="/publications" element={<Publications />} />
         </Routes>
       </Router>
 
@@ -35,7 +37,7 @@ function App() {
       <div
         style={{
           textAlign: "center",
-          marginTop: "50px",
+          marginTop: "20px",
           paddingBottom: "20px",
         }}
       >
