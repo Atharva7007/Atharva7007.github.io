@@ -1,4 +1,4 @@
-import React from "react";
+import DecryptedText from "../blocks/TextAnimations/DecryptedText/DecryptedText";
 
 const publications = [
   {
@@ -25,8 +25,25 @@ const publications = [
 const Publications = () => {
   return (
     <div className="flex flex-col items-center mt-10 px-6">
-      <h1 className="text-3xl font-bold text-neon-green mb-6">Publications</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div>
+        {/* Increased font size */}
+        <DecryptedText
+          text="Publications"
+          animateOn="view"
+          revealDirection="start"
+          sequential={true}
+          speed={50}
+          style={{
+            color: "#39ff14",
+            fontSize: "2.5rem",
+            fontWeight: "bold",
+          }} // Increased font size
+        />
+      </div>
+      <div
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+        style={{ marginTop: "40px" }}
+      >
         {publications.map((pub, index) => (
           <div
             key={index}
