@@ -41,13 +41,14 @@ const About = () => {
           justifyContent: "center",
           alignItems: "center",
           width: "50%",
+          paddingLeft: "50px",
         }}
       >
         <img
           src={myPhoto} // Replace with your actual image path
           alt="Atharva Pansare"
           style={{
-            width: "60%",
+            width: "75%",
             height: "auto",
             borderRadius: "10px",
             boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",

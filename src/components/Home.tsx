@@ -16,30 +16,42 @@ const Home = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentRole((prev) => (prev + 1) % roles.length);
-    }, 2000); // Change role every 2 seconds
+    }, 4000); // Change role every 2 seconds
 
     return () => clearInterval(interval); // Clear interval on component unmount
+  }, []);
+
+  const [animationKey, setAnimationKey] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setAnimationKey((prevKey) => prevKey + 1); // Increment key to force re-render
+    }, 4000);
+
+    return () => clearInterval(interval); // Cleanup interval on unmount
   }, []);
 
   return (
     <div style={{ marginTop: "80px" }}>
       <DecryptedText
+        key={animationKey} // To re-render and run animation
         text="Hi there!"
         animateOn="view"
         revealDirection="start"
         sequential={true}
-        speed={50}
+        speed={40}
         style={{ fontSize: "2rem" }} // Increased font size
       />
       <div>
         <span style={{ fontSize: "2.5rem" }}>I'm</span>{" "}
         {/* Increased font size */}
         <DecryptedText
+          key={animationKey} // To re-render and run animation
           text=" Atharva Pansare"
           animateOn="view"
           revealDirection="start"
           sequential={true}
-          speed={50}
+          speed={45}
           style={{ color: "#39ff14", fontSize: "2.5rem" }} // Increased font size
         />
       </div>

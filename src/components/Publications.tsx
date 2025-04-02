@@ -1,4 +1,5 @@
 import DecryptedText from "../blocks/TextAnimations/DecryptedText/DecryptedText";
+import { useState, useEffect } from "react";
 
 const publications = [
   {
@@ -23,16 +24,26 @@ const publications = [
 ];
 
 const Publications = () => {
+  const [animationKey, setAnimationKey] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setAnimationKey((prevKey) => prevKey + 1); // Increment key to force re-render
+    }, 4000);
+
+    return () => clearInterval(interval); // Cleanup interval on unmount
+  }, []);
   return (
     <div className="flex flex-col items-center mt-10 px-6">
       <div>
         {/* Increased font size */}
         <DecryptedText
+          key={animationKey}
           text="Publications"
           animateOn="view"
           revealDirection="start"
           sequential={true}
-          speed={50}
+          speed={40}
           style={{
             color: "#39ff14",
             fontSize: "2.5rem",
