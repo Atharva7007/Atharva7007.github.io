@@ -16,7 +16,7 @@ const Home = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentRole((prev) => (prev + 1) % roles.length);
-    }, 4000); // Change role every 2 seconds
+    }, 3000); // Change role every 2 seconds
 
     return () => clearInterval(interval); // Clear interval on component unmount
   }, []);
