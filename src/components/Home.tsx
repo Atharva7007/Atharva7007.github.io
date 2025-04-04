@@ -58,19 +58,37 @@ const Home = () => {
       <br></br>
 
       <div>
-        <p style={{ fontSize: "1.8rem" }}>
-          {" "}
-          {/* Increased font size */}I am{" "}
-          <span style={{ color: "#39ff14" }}>{roles[currentRole]}</span>{" "}
+        <p style={{ fontSize: "1.8rem", marginTop: "-20px" }}>
+          I am{" "}
+          <span
+            style={{
+              color: "#39ff14",
+              display: "inline-block",
+              minWidth: "32ch", // approx width for the longest role
+              // whiteSpace: "nowrap",
+            }}
+          >
+            {roles[currentRole]}
+          </span>
         </p>
       </div>
 
-      <div style={{ textAlign: "center", marginTop: "50px" }}>
+      <div
+        style={{
+          textAlign: "center",
+          marginTop: "20px",
+          alignItems: "center",
+        }}
+      >
         <p>While you're here, here's something fun I found:</p>
         <img
-          src="https://imgs.xkcd.com/comics/exploits_of_a_mom.png"
-          alt="Exploits of a Mom"
-          style={{ maxWidth: "100%", height: "auto", padding: "10px 10px" }}
+          src="https://imgs.xkcd.com/comics/compiling.png"
+          alt="Compiling"
+          style={{
+            maxWidth: "100%",
+            height: "auto",
+            padding: "10px 110px",
+          }}
         />
       </div>
     </div>

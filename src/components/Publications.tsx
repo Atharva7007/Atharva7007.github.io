@@ -38,7 +38,7 @@ const Publications = () => {
       <div>
         {/* Increased font size */}
         <DecryptedText
-          key={animationKey}
+          key={animationKey} // To re-render and run animation
           text="Publications"
           animateOn="view"
           revealDirection="start"
