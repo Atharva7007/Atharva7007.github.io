@@ -76,15 +76,16 @@ const Home = () => {
       <div
         style={{
           textAlign: "center",
-          marginTop: "20px",
+          marginTop: "30px",
           alignItems: "center",
         }}
       >
         <p>While you're here, here's something fun I found:</p>
         <img
-          src="https://imgs.xkcd.com/comics/compiling.png"
-          alt="Compiling"
+          src="https://imgs.xkcd.com/comics/machine_learning.png"
+          alt="XKCD 1881: Machine Learning"
           style={{
+            display: "inline-block",
             maxWidth: "100%",
             height: "auto",
             padding: "10px 110px",
