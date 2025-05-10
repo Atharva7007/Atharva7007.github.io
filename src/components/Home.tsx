@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import DecryptedText from "../blocks/TextAnimations/DecryptedText/DecryptedText";
+import "../styles/common.css";
 
 const Home = () => {
   const [currentRole, setCurrentRole] = useState(0);
@@ -43,29 +44,28 @@ const Home = () => {
         style={{ fontSize: "2rem" }} // Increased font size
       />
       <div>
-        <span style={{ fontSize: "2.5rem" }}>I'm</span>{" "}
-        {/* Increased font size */}
+        <span className="heading-large">I'm</span>{" "}
         <DecryptedText
-          key={animationKey} // To re-render and run animation
+          key={animationKey}
           text=" Atharva Pansare"
           animateOn="view"
           revealDirection="start"
           sequential={true}
           speed={45}
-          style={{ color: "#39ff14", fontSize: "2.5rem" }} // Increased font size
+          style={{ color: "#39ff14" }}
+          className="heading-large"
         />
       </div>
-      <br></br>
+      <br />
 
       <div>
-        <p style={{ fontSize: "1.8rem", marginTop: "-20px" }}>
+        <p className="text-medium" style={{ marginTop: "-20px" }}>
           I am{" "}
           <span
             style={{
               color: "#39ff14",
               display: "inline-block",
-              minWidth: "32ch", // approx width for the longest role
-              // whiteSpace: "nowrap",
+              minWidth: "32ch",
             }}
           >
             {roles[currentRole]}
@@ -73,13 +73,7 @@ const Home = () => {
         </p>
       </div>
 
-      <div
-        style={{
-          textAlign: "center",
-          marginTop: "30px",
-          alignItems: "center",
-        }}
-      >
+      <div className="flex-center" style={{ marginTop: "30px" }}>
         <p>While you're here, here's something fun I found:</p>
         <img
           src="https://imgs.xkcd.com/comics/machine_learning.png"

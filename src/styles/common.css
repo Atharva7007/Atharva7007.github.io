@@ -1,0 +1,52 @@
+/* Common styles */
+.social-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #333;
+  color: white;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+.social-links-container {
+  text-align: center;
+  margin-top: 20px;
+  padding-bottom: 20px;
+}
+
+.social-links-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+/* Common text styles */
+.heading-large {
+  font-size: 2.5rem;
+}
+
+.heading-medium {
+  font-size: 2rem;
+}
+
+.text-medium {
+  font-size: 1.8rem;
+}
+
+/* Common layout styles */
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

@@ -6,8 +6,9 @@ import Projects from "./components/Projects";
 import Resume from "./components/Resume";
 import LetterGlitch from "./blocks/Backgrounds/LetterGlitch/LetterGlitch";
 import Skills from "./components/Skills";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
 import Publications from "./components/Publications";
+import SocialLinks from "./components/SocialLinks";
+import "./styles/common.css";
 
 function App() {
   return (
@@ -34,65 +35,7 @@ function App() {
         />
       </div>
 
-      <div
-        style={{
-          textAlign: "center",
-          marginTop: "20px",
-          paddingBottom: "20px",
-        }}
-      >
-        <h2>Find me on:</h2>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            gap: "20px",
-            marginTop: "10px",
-          }}
-        >
-          {/* LinkedIn Icon */}
-          <a
-            href="https://www.linkedin.com/in/atharva-pansare-948293207/"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              width: "50px",
-              height: "50px",
-              borderRadius: "50%",
-              backgroundColor: "#333", // LinkedIn color
-              color: "white",
-              fontSize: "24px",
-              textDecoration: "none",
-            }}
-          >
-            <FaLinkedin />
-          </a>
-
-          {/* GitHub Icon */}
-          <a
-            href="https://github.com/Atharva7007"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              width: "50px",
-              height: "50px",
-              borderRadius: "50%",
-              backgroundColor: "#333", // GitHub color
-              color: "white",
-              fontSize: "24px",
-              textDecoration: "none",
-            }}
-          >
-            <FaGithub />
-          </a>
-        </div>
-      </div>
+      <SocialLinks />
     </>
   );
 }
