@@ -98,7 +98,7 @@ const Skills = () => {
             {category.skills.map((skill, skillIndex) => (
               <div
                 key={skillIndex}
-                className="flex flex-col items-center bg-gray-800 p-4 rounded-2xl shadow-lg hover:scale-105 transition-transform w-40"
+                className="flex flex-col items-center justify-center bg-gray-800 p-4 rounded-2xl shadow-lg hover:scale-105 transition-transform w-40 h-28"
               >
                 <div className="text-4xl mb-2">{skill.icon}</div>
                 <p className="text-base font-semibold text-white">
