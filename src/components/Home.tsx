@@ -34,57 +34,63 @@ const Home = () => {
 
   return (
     <div style={{ marginTop: "80px" }}>
-      <DecryptedText
-        key={animationKey} // To re-render and run animation
-        text="Hi there!"
-        animateOn="view"
-        revealDirection="start"
-        sequential={true}
-        speed={40}
-        style={{ fontSize: "2rem" }} // Increased font size
-      />
-      <div>
-        <span className="heading-large">I'm</span>{" "}
-        <DecryptedText
-          key={animationKey}
-          text=" Atharva Pansare"
-          animateOn="view"
-          revealDirection="start"
-          sequential={true}
-          speed={45}
-          style={{ color: "#39ff14" }}
-          className="heading-large"
-        />
-      </div>
-      <br />
+      <div className="flex items-center justify-between px-10">
+        <div className="flex-1">
+          <DecryptedText
+            key={animationKey}
+            text="Hi there!"
+            animateOn="view"
+            revealDirection="start"
+            sequential={true}
+            speed={40}
+            style={{ fontSize: "2rem" }}
+          />
+          <div>
+            <span className="heading-large">I'm</span>{" "}
+            <DecryptedText
+              key={animationKey}
+              text=" Atharva Pansare"
+              animateOn="view"
+              revealDirection="start"
+              sequential={true}
+              speed={45}
+              style={{ color: "#39ff14" }}
+              className="heading-large"
+            />
+          </div>
+          <br />
 
-      <div>
-        <p className="text-medium" style={{ marginTop: "-20px" }}>
-          I am{" "}
-          <span
+          <div>
+            <p className="text-medium" style={{ marginTop: "-20px" }}>
+              I am{" "}
+              <span
+                style={{
+                  color: "#39ff14",
+                  display: "inline-block",
+                  minWidth: "32ch",
+                }}
+              >
+                {roles[currentRole]}
+              </span>
+            </p>
+          </div>
+        </div>
+
+        <div className="flex-1 flex flex-col items-center">
+          <p className="mb-4">
+            While you're here, here's something fun I found:
+          </p>
+          <img
+            src="https://imgs.xkcd.com/comics/machine_learning.png"
+            alt="XKCD 1881: Machine Learning"
             style={{
-              color: "#39ff14",
               display: "inline-block",
-              minWidth: "32ch",
+              maxWidth: "75%",
+              height: "auto",
+              padding: "10px 20px",
             }}
-          >
-            {roles[currentRole]}
-          </span>
-        </p>
-      </div>
-
-      <div className="flex-center" style={{ marginTop: "30px" }}>
-        <p>While you're here, here's something fun I found:</p>
-        <img
-          src="https://imgs.xkcd.com/comics/machine_learning.png"
-          alt="XKCD 1881: Machine Learning"
-          style={{
-            display: "inline-block",
-            maxWidth: "100%",
-            height: "auto",
-            padding: "10px 110px",
-          }}
-        />
+          />
+        </div>
       </div>
     </div>
   );
