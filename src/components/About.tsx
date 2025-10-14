@@ -1,4 +1,4 @@
-import myPhoto from "/assets/Atharva 1.jpg"; // Ensure you have your photo in the assets folder
+import myPhoto from "/assets/Atharva.jpg"; // Ensure you have your photo in the assets folder
 
 const About = () => {
   return (
